@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:49 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 05:32:21 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:54:34 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ int	main(void)
 	sa.sa_flags = SA_RESTART;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
-	ft_putstr("PID == ");
+	write(1, "PID == ", 7);
 	pid = getpid();
 	ft_putnbr(pid);
-	ft_putchar('\n');
+	write(1, "\n", 1);
 	while (1)
 		pause();
 	return (0);

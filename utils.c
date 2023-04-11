@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:52 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 02:28:42 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:58:27 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,10 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	while (str[i])
-		ft_putchar(str[i]);
-}
-
 void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
-		ft_putstr("-2147483648");
+		write(1, "-2147483648", 11);
 	else if (n < 0)
 	{
 		ft_putchar('-');

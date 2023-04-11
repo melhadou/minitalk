@@ -12,7 +12,7 @@ $(CLIENT): $(OBJ)
 	$(CC) utils.c client.c -o $(CLIENT)
 
 $(SERVER): $(OBJ)
-	$(CC)  utils.c server.c -o $(SERVER)
+	$(CC) utils.c server.c -o $(SERVER)
 
 %.o: %.c
 	$(CC) -c $< -o $@

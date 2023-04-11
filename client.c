@@ -6,11 +6,12 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:44 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 05:32:40 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:51:45 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
+#include <stdio.h>
 
 void	char_to_binary(char c, int pid)
 {
@@ -39,19 +40,21 @@ int	main(int argc, char *argv[])
 	int	pid;
 	int	i;
 
-	if (argc != 3)
-	{
-		ft_putstr("Usage: ./client PID 'Message'");
-		return (1);
-	}
-	else
+	if (argc == 3)
 	{
 		pid = ft_atoi(argv[1]);
+		if (!pid)
+			return (1);
 		while (argv[2][i])
 		{
 			char_to_binary(argv[2][i], pid);
 			i++;
 		}
+	}
+	else
+	{
+		write(1, "Usage: ./client PID 'Message'\n", 30);
+		return (1);
 	}
 	return (0);
 }
