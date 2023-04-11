@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:44 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 02:28:23 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:32:40 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Usage: ./client PID 'Message'");
+		ft_putstr("Usage: ./client PID 'Message'");
 		return (1);
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:49 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 02:48:15 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/04/11 05:32:21 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,6 @@ int	main(void)
 	ft_putnbr(pid);
 	ft_putchar('\n');
 	while (1)
-	{
 		pause();
-	}
 	return (0);
 }
