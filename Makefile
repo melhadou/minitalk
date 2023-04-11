@@ -3,6 +3,7 @@ CLIENT = client
 
 CC = cc
 RM = rm -rf 
+CFILES = server.c utils.c client.c
 OBJ = $(CFILES:%.c=%.o)
 
 all: $(CLIENT) $(SERVER)
