@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:56 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 02:31:24 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:59:10 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ int		ft_atoi(const char *nptr);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_putnbr(int n);
+void	send_sig(int pid, int val);
 #endif

@@ -6,33 +6,36 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:44 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 21:42:00 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:48:37 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-#include <stdio.h>
+
+void	send_sig(int pid, int val)
+{
+	usleep(250);
+	if (val)
+	{
+		kill(pid, SIGUSR2);
+		return ;
+	}
+	kill(pid, SIGUSR1);
+}
 
 void	char_to_binary(char c, int pid)
 {
-	int	i;
+	t_bit	bits;
 
-	i = 0;
-	while (i < 8)
-	{
-		if (c % 2)
-		{
-			kill(pid, SIGUSR2);
-			usleep(250);
-		}
-		else
-		{
-			kill(pid, SIGUSR1);
-			usleep(250);
-		}
-		c /= 2;
-		i++;
-	}
+	bits = *(t_bit *)&c;
+	send_sig(pid, bits.b1);
+	send_sig(pid, bits.b2);
+	send_sig(pid, bits.b3);
+	send_sig(pid, bits.b4);
+	send_sig(pid, bits.b5);
+	send_sig(pid, bits.b6);
+	send_sig(pid, bits.b7);
+	send_sig(pid, bits.b8);
 }
 
 int	main(int argc, char *argv[])
@@ -45,7 +48,7 @@ int	main(int argc, char *argv[])
 		pid = ft_atoi(argv[1]);
 		if (pid == 0 || pid < 0)
 		{
-			write(1,"Error: Invalid pid\n", 18);
+			write(1, "Error: Invalid pid\n", 18);
 			return (1);
 		}
 		while (argv[2][i])
