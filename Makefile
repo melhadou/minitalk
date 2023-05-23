@@ -3,15 +3,19 @@ CLIENT = client
 
 CC = cc
 RM = rm -rf 
-CFILES = server.c utils.c client.c
-OBJ = $(CFILES:%.c=%.o)
+
+CFILES_SERVER = server.c utils.c
+OBJ_SERVER = $(CFILES_SERVER:%.c=%.o)
+
+CFILES_CLIENT = client.c utils.c
+OBJ_CLIENT = $(CFILES_CLIENT:%.c=%.o)
 
 all: $(CLIENT) $(SERVER)
 
-$(CLIENT): $(OBJ)
+$(CLIENT): $(OBJ_CLIENT)
 	$(CC) utils.c client.c -o $(CLIENT)
 
-$(SERVER): $(OBJ)
+$(SERVER): $(OBJ_SERVER)
 	$(CC) utils.c server.c -o $(SERVER)
 
 %.o: %.c
@@ -22,4 +26,5 @@ clean:
 
 fclean: clean
 	$(RM) $(SERVER) $(CLIENT)
+
 re: fclean all
