@@ -6,13 +6,11 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:49 by melhadou          #+#    #+#             */
-/*   Updated: 2023/04/11 05:54:34 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/05/23 11:42:25 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-#include <signal.h>
-#include <stdio.h>
 
 t_bit	g_char_bits;
 

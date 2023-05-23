@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:44 by melhadou          #+#    #+#             */
-/*   Updated: 2023/05/22 18:48:37 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/05/22 19:42:58 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(int argc, char *argv[])
 		pid = ft_atoi(argv[1]);
 		if (pid == 0 || pid < 0)
 		{
-			write(1, "Error: Invalid pid\n", 18);
+			write(1, "Error: Invalid pid\n", 19);
 			return (1);
 		}
 		while (argv[2][i])
