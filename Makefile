@@ -22,7 +22,7 @@ $(SERVER): $(OBJ_SERVER)
 	$(CC) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ_CLIENT) $(OBJ_SERVER)
 
 fclean: clean
 	$(RM) $(SERVER) $(CLIENT)
