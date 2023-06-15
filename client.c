@@ -6,7 +6,7 @@
 /*   By: melhadou <melhadou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 06:54:44 by melhadou          #+#    #+#             */
-/*   Updated: 2023/05/23 17:44:12 by melhadou         ###   ########.fr       */
+/*   Updated: 2023/05/27 13:37:34 by melhadou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	main(int argc, char *argv[])
 			write(1, "Error: Invalid pid\n", 19);
 			return (1);
 		}
+		i = 0;
 		while (argv[2][i])
 		{
 			char_to_binary(argv[2][i], pid);

@@ -1,7 +1,7 @@
 SERVER = server
 CLIENT = client
 
-CC = cc
+CC = cc -Wall -Wextra -Werror
 RM = rm -rf 
 
 CFILES_SERVER = server.c utils.c
